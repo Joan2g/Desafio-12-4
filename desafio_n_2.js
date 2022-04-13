@@ -24,7 +24,7 @@ const fs = require ("fs")
         return new Promise ((resolve, reject) => {
             fs.readFile("./productos.json", "utf-8", (err, data) => {
                 if(err) {
-                    res.send({message: "Error en la consulta"})
+                    console.log("Error en la consulta!!")
                 } else {
                     let arrNew = JSON.parse(data)
                     let randomProduct = arrNew[Math.floor(Math.random() * arrNew.length)]
